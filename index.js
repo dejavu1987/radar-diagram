@@ -1,1 +1,1 @@
-export { defaut as default } from './src/radar.js';
+export { default as default } from './src/radar.js';
