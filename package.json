@@ -1,0 +1,21 @@
+{
+  "name": "radar-diagram",
+  "version": "1.0.1",
+  "description": "Library to plot a radar diagram",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/dejavu1987/radar-diagram"
+  },
+  "keywords": [
+    "radar",
+    "chart",
+    "diagram",
+    "vanilla"
+  ],
+  "author": "anil@anilmaharjan.com.np",
+  "license": "MIT"
+}
