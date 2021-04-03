@@ -31,6 +31,15 @@ export default class Radar {
     this.dots = this.getDots();
   }
 
+  getSegmentLabelPathBase() {
+    const startCoord = this.polarToCartesian(this.maxPlotRadius, 0);
+    const endCoord = this.polarToCartesian(
+      this.maxPlotRadius,
+      this.options.totalAngle / this.segments.length
+    );
+    return this.getSegmentLabelPathD(startCoord, endCoord);
+  }
+
   getSegmentAxes() {
     return this.segments.map((seg, idx) => {
       // starting angle
@@ -48,10 +57,14 @@ export default class Radar {
           y1: this.options.baseDimension / 2,
           x2: upperCoord.x,
           y2: upperCoord.y,
-          labelPath: `M ${upperCoordJ.x},${upperCoordJ.y} A${this.maxPlotRadius},${this.maxPlotRadius} 0 0,1 ${upperCoord.x},${upperCoord.y}`,
+          labelPath: this.getSegmentLabelPathD(upperCoord, upperCoordJ),
         },
       };
     });
+  }
+
+  getSegmentLabelPathD(startCoord, endCoord) {
+    return `M ${endCoord.x},${endCoord.y} A${this.maxPlotRadius},${this.maxPlotRadius} 0 0,1 ${startCoord.x},${startCoord.y}`;
   }
 
   getRingAxes() {
