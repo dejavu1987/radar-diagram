@@ -1,5 +1,9 @@
 # radar-diagram
 
+Library to draw radar from json data.
+
+![image](https://github.com/dejavu1987/radar-diagram/assets/1720245/39085e89-c2bd-4368-8c93-1f32707f5c51)
+
 ```js
 run npm install radar-diagram
 ``` 
