@@ -1,6 +1,6 @@
 {
   "name": "radar-diagram",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Library to plot a radar diagram",
   "main": "index.js",
   "scripts": {
